@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_skill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="4dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="36dp"
+            >
+
+            <ImageView
+                android:id="@+id/icon_skill"
+                android:src="@drawable/skill_iq_trimmed"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/name_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/icon_skill"
+                android:layout_centerVertical="true"
+                android:text="Jonh Doe"
+                android:layout_marginLeft="24dp"
+                card_view:layout_constraintLeft_toRightOf="@+id/icon_skill"
+
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_skill_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="223 learning hours,"
+                android:layout_below="@id/name_skill"
+                android:layout_alignLeft="@id/icon_skill"
+                android:layout_marginLeft="24dp"
+                card_view:layout_constraintTop_toBottomOf="@id/name_skill"
+                card_view:layout_constraintLeft_toRightOf="@id/icon_skill"
+                />
+
+            <TextView
+                android:id="@+id/tv_country_skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Kenya"
+                card_view:layout_constraintLeft_toRightOf="@id/tv_skill_score"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

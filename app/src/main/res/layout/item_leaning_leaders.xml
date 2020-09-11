@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="65dp"
+    >
+
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_learning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="12dp"
+            android:paddingHorizontal="36dp"
+            >
+
+            <ImageView
+                android:id="@+id/icon_learning"
+                android:src="@drawable/top_learner"
+                android:layout_width="54dp"
+                android:layout_height="54dp"
+                android:layout_margin="5dp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/name_learning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/icon_learning"
+                android:layout_centerVertical="true"
+                android:text="Jonh Doe"
+                android:layout_marginLeft="24dp"
+                card_view:layout_constraintLeft_toRightOf="@+id/icon_learning"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tv_learning_hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="223 learning hours,"
+                android:layout_below="@id/name_learning"
+                android:layout_alignLeft="@id/icon_learning"
+                android:layout_marginLeft="24dp"
+                card_view:layout_constraintTop_toBottomOf="@id/name_learning"
+                card_view:layout_constraintLeft_toRightOf="@id/icon_learning"
+                />
+            <TextView
+                android:id="@+id/tv_learn_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Kenya"
+                card_view:layout_constraintLeft_toRightOf="@id/tv_learning_hours"
+                card_view:layout_constraintBottom_toBottomOf="parent"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
